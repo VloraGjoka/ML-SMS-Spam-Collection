@@ -41,7 +41,23 @@ Për datasetin "SMS Spam Collection", ne mund të përdorim disa algoritme të n
 - **Përshtatshëm për**: Rastet kur dëshirojmë një model probabilitetik që tregon gjasat e përkatësisë në një klasë.
 - **Arsyeja e përdorimit**: Përdoret shpesh për probleme të klasifikimit binar siç është rasti me SMS spam dhe ham, ofron një mënyrë intuitive për të kuptuar rëndësinë e karakteristikave të ndryshme.
 
+### Testimi i modelit
+
+Për të vlerësuar performancën e modeleve të klasifikimit, ne mund të përdorim teknika të ndryshme të testimit, duke përfshirë:
+
+- **Ndarja e të dhënave në setin e trajnimit dhe testimit**: Një pjesë e të dhënave (zakonisht rreth 70-80%) përdoret për të trajnuar modelin, ndërsa pjesa tjetër përdoret për të testuar performancën e tij.
+- **Kryqëzimi i validimit (Cross-Validation)**: Përdoret për të vlerësuar aftësinë e generalizimit të një modeli të mësimit të makinës mbi një set të dhënash të padukshme.
+- **Metrikat e performancës**: Përfshijnë saktësinë (accuracy), matricën e konfuzionit, precision, recall, dhe F1 score për të matur se sa mirë modeli mund të klasifikojë mesazhet.
+
+Përdorimi i një kombinimi të këtyre metodave siguron një vlerësim të gjithanshëm të aftësisë së modelit për të parashikuar saktësisht kategoritë e mesazheve.
+
 
 ## Rezultatet e fazës së parë
 
 Në fund të kësaj faze, pritet të kemi një skicë të qartë të procesit të trajnimit të modelit, duke përfshirë përgatitjen e të dhënave, zgjedhjen e modelit, dhe një vlerësim të parë të performancës së modelit në datasetin e testit.
+
+
+# Kontributi
+Vlora Gjoka
+
+Sadik Zenuni
