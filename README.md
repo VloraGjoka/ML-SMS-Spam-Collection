@@ -1,7 +1,7 @@
 
 # Faza I: Përgatitja e modelit
 
-Ky dokument përmban përshkrimin e fazës së parë të projektimit dhe përgatitjes së modelit për klasifikimin e mesazheve në 'ham' (mesazhe të dëshiruara) dhe 'spam' (mesazhe të padëshiruara), duke përdorur datasetin "SMS Spam Collection".
+Ky projekt në lendën: *Machine learning* përmban përshkrimin e fazës së parë të projektimit dhe përgatitjes së modelit për klasifikimin e mesazheve në 'ham' (mesazhe të dëshiruara) dhe 'spam' (mesazhe të padëshiruara), duke përdorur datasetin "SMS Spam Collection".
 
 ## Përshkrimi i detyrës
 
@@ -20,6 +20,22 @@ Dataseti i përdorur është "SMS Spam Collection", i disponueshëm në:
 Ky dataset përmban të paktën dy atribute:
 - **Label**: Etiketa që tregon nëse një mesazh është 'ham' ose 'spam'.
 - **Message**: Teksti i mesazhit që do të analizohet dhe klasifikohet.
+
+## Instalimi i librave të nevojshme
+
+Për të ekzekutuar skriptat e këtij projekti të Mësimit të Makinës për datasetin "SMS Spam Collection", është e nevojshme të instalohen disa librarive specifike të Python. Këto librarive përfshijnë:
+
+- pandas
+- scikit-learn
+
+## Udhëzime për instalim
+
+Ju mund të instaloni të gjitha varësitë e nevojshme përmes menaxherit të paketave `pip`. Ekzekutoni komandat e mëposhtme në terminalin ose command prompt tuaj për të instaluar secilën librari:
+
+```
+pip install pandas
+pip install scikit-learn
+```
 
 ## Algoritmet e klasifikimit
 
@@ -56,6 +72,44 @@ Përdorimi i një kombinimi të këtyre metodave siguron një vlerësim të gjit
 
 Në fund të kësaj faze, pritet të kemi një skicë të qartë të procesit të trajnimit të modelit, duke përfshirë përgatitjen e të dhënave, zgjedhjen e modelit, dhe një vlerësim të parë të performancës së modelit në datasetin e testit.
 
+### Struktura e datasetit
+
+```
+# Shfaqja e dataseti-it
+printo_datasetin("Dataset-i", df)
+```
+![Dataset](faza1/results/dataset.png)
+
+### Njohuri mbi llojet e të dhënave
+```
+# Për të fituar njohuri mbi llojet e të dhënave ekzekutojmë këtë komandë:
+
+df.info()
+```
+![DaInfo_Dataset](faza1/results/info_dataset.png)
+
+### Trajnimi dhe testimi i të dhënave
+
+```
+# Ndajmë të dhënat në trajnues dhe testim
+X_train, X_test, y_train, y_test = train_test_split(df['Message'], df['Label'], test_size=0.2, random_state=42)
+
+# Përdorimi i TF-IDF Vectorizer për të kthyer tekstet në një format të përpunueshëm numerik
+vectorizer = TfidfVectorizer()
+X_train_transformed = vectorizer.fit_transform(X_train)
+X_test_transformed = vectorizer.transform(X_test)
+
+# Trajnojmë modelin duke përdorur Naive Bayes
+model = MultinomialNB()
+model.fit(X_train_transformed, y_train)
+
+# Parashikimi dhe vlerësimi i modelit
+predictions = model.predict(X_test_transformed)
+print("Accuracy:", accuracy_score(y_test, predictions))
+print("Confusion Matrix:\n", confusion_matrix(y_test, predictions))
+print("Classification Report:\n", classification_report(y_test, predictions))
+```
+![Train_Test_Data](faza1/results/train_test.png)
 
 # Kontributi
 Vlora Gjoka
