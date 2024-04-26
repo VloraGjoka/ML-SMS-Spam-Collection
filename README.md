@@ -88,6 +88,10 @@ df.info()
 ```
 ![DaInfo_Dataset](faza1/results/info_dataset.png)
 
+
+
+# Faza 2: Trajnimi i modelit
+
 ### Trajnimi dhe testimi i të dhënave
 
 ```
