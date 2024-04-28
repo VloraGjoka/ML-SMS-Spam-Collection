@@ -62,11 +62,6 @@ Ju mund të instaloni të gjitha varësitë e nevojshme përmes menaxherit të p
 pip install pandas
 pip install scikit-learn
 ```
-
-## Rezultatet e fazës së parë
-
-Në fund të kësaj faze, pritet të kemi një skicë të qartë të procesit të trajnimit të modelit, duke përfshirë përgatitjen e të dhënave, zgjedhjen e modelit, dhe një vlerësim të parë të performancës së modelit në datasetin e testit.
-
 ### Struktura e datasetit
 
 ```
@@ -82,6 +77,50 @@ printo_datasetin("Dataset-i", df)
 df.info()
 ```
 ![DaInfo_Dataset](faza1/results/info_dataset.png)
+
+### Menaxhimi vlerave null
+
+```
+# Komanda për kontrollimin e vlerave null:
+df.isnull().sum()
+```
+- Në dataset-in tonë nuk ka kolona me vlera null.
+
+![Dataset](faza1/results/null_values.png)
+
+### Menaxhimi i duplikateve:
+```
+# Komanda për kërkimin e duplikateve dhe shfaqja e rezultatit
+print("Duplikatet: " + str(df.duplicated().sum()))
+```
+- Në dataset-in tonë i janë gjetur disa duplikate:
+![Dataset](faza1/results/duplicates.png)
+
+- Fshirja e duplikateve
+![Dataset](faza1/results/delete_duplicates.png)
+
+### Mostrimi i të dhënave
+
+#### Përpara Mostrimit
+
+Fillimisht, analizuam shpërndarjen origjinale të klasave në datasetin tonë, i cili përfshin mesazhe të klasifikuara si 'ham' (dëshirueshme) dhe 'spam' (të padëshirueshme). Ky hap është thelbësor për të vlerësuar nevojën për mostrim.
+
+![Shpërndarja e Klasave Para Mostrimit](faza1/results/before_moster.png)
+
+#### Procesi i Mostrimit
+
+Për të balancuar datasetin, ne kemi aplikuar *upsampling* në klasën me përfaqësim më të ulët ('spam'). Kjo përfshin zgjedhjen e rastësishme të rreshtave nga klasa e pakicës, me zëvendësim, derisa numri i rreshtave të saj të arrijë numrin e rreshtave në klasën e shumicës ('ham').
+
+#### Pas Mostrimit
+
+Pas përfundimit të procesit të mostrimit, ne kemi krijuar vizualizime të reja për të treguar shpërndarjen e re të balancuar të klasave. Kjo na lejon të vërtetojmë që dataseti tani është më i balancuar dhe i përshtatshëm për trajnimin e modeleve të mësimit të makinës.
+
+![Shpërndarja e Klasave Pas Mostrimit](faza1/results/after_moster.png)
+
+
+## Rezultatet e fazës së parë
+
+Në fund të kësaj faze, pritet të kemi një skicë të qartë të procesit të trajnimit të modelit, duke përfshirë përgatitjen e të dhënave, zgjedhjen e modelit, dhe një vlerësim të parë të performancës së modelit në datasetin e testit.
 
 # Faza 2: Trajnimi i Modelit
 
