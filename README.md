@@ -190,9 +190,11 @@ plt.show()
 
 # Faza 2: Trajnimi i Modelit
 
-## Trajnimi dhe Testimi i të Dhënave
+Në këtë fazë të projektit, qëllimi kryesor është të trajnojmë modele të ndryshme të mësimit të makinës për të parashikuar dhe klasifikuar mesazhet në baza të përmbajtjes së tyre si 'spam' ose 'jo spam'. Procesi përfshin ndarjen e të dhënave në sete trajnimi dhe testimi, zgjedhjen dhe konfigurimin e modeleve specifike të mësimit të makinës, dhe vlerësimin e performancës së tyre përmes metrikave të ndryshme si Saktësia, F1-score, Recall dhe Precision.
 
-Në këtë fazë, ne ndajmë të dhënat në setin e trajnimit dhe testimit dhe trajnojmë modele të mësimit të makinës për të bërë parashikime bazuar në përmbajtjen e mesazhit.
+## Trajnimi dhe testimi i të dhënave
+
+Ne ndajmë të dhënat në setin e trajnimit dhe testimit dhe trajnojmë modele të mësimit të makinës për të bërë parashikime bazuar në përmbajtjen e mesazhit.
 
 ## Testimi i Modelit
 
@@ -266,7 +268,7 @@ U testuan modelet e mëposhtme:
 Të dhënat u ndanë në sete trajnimi dhe testimi me ndarje të ndryshme si 40/60, 30/70, 20/80, dhe 10/90 për të vlerësuar ndikimin e madhësisë së setit të trajnimit në performancën e modelit.
 
 
-### Rezultatet e Vlerësimit të Modeleve të Klasifikimit të Mesazheve SMS
+### Rezultatet e vlerësimit të modeleve të klasifikimit të mesazheve SMS
 
 Tabelat e mëposhtme përmbajnë rezultatet e vlerësimit të modeleve të ndryshëm të klasifikimit duke përdorur ndarje të ndryshme të të dhënave për trajnim dhe testim. Vlerësimi është bërë duke përdorur matricat: saktësinë (Accuracy), F1-score, Recall dhe Precision.
 
@@ -310,7 +312,3 @@ Tabelat e mëposhtme përmbajnë rezultatet e vlerësimit të modeleve të ndrys
 | Support Vector Machine| 0.98    | 0.91     | 0.85   | 0.98      |
 | K Neighbors          | 0.92     | 0.34     | 0.21   | 1.00      |
 
-# Kontributi
-Vlora Gjoka
-
-Sadik Zenuni
