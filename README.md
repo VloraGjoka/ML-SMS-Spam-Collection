@@ -123,20 +123,20 @@ Në analizën tonë të datasetit "SMS Spam Collection", kemi përdorur agregime
 
 Statistikat e mëposhtme janë nxjerrë nga të dhënat:
 
-- **Gjatësia Mesatare e Mesazheve**: Gjatësia mesatare e të gjithë mesazheve në dataset.
-- **Gjatësia Maksimale dhe Minimale e Mesazheve**: Tregon gjatësinë maksimale dhe minimale të mesazheve që janë regjistruar.
-- **Numri i Mesazheve 'Spam' dhe 'Ham'**: Tregon se sa mesazhe janë klasifikuar si spam dhe sa si ham.
-- **Gjatësia Mesatare e Mesazheve sipas Kategorisë**: Mesatarja e gjatësisë së mesazheve për secilën kategori, që jep një ide mbi karakteristikat e mesazheve spam dhe ham.
+- **Gjatësia mesatare e mesazheve**: Gjatësia mesatare e të gjithë mesazheve në dataset.
+- **Gjatësia maksimale dhe minimale e mesazheve**: Tregon gjatësinë maksimale dhe minimale të mesazheve që janë regjistruar.
+- **Numri i mesazheve 'Spam' dhe 'Ham'**: Tregon se sa mesazhe janë klasifikuar si spam dhe sa si ham.
+- **Gjatësia mesatare e mesazheve sipas kategorisë**: Mesatarja e gjatësisë së mesazheve për secilën kategori, që jep një ide mbi karakteristikat e mesazheve spam dhe ham.
 
 Këto të dhëna agreguese na ndihmojnë të përgatisim dhe rregullojmë më mirë modelet tona të mësimit të makinës për përmirësimin e saktësisë së klasifikimit të mesazheve.
 
 ![Agregimi i te dhenave](faza1/results/agregation.png)
 
-###Menaxhimi i Outliers
+### Menaxhimi i Outliers
 
 Në datasetin "SMS Spam Collection", ne kemi analizuar dhe trajtuar outliers për të përmirësuar cilësinë e të dhënave për mësimin e makinës. Outliers mund të ndikojnë ndjeshëm në modelin përfundimtar dhe mund të çojnë në përfundime të pasakta.
 
-#### Metodat e Identifikimit
+#### Metodat e identifikimit
 
 Outliers u identifikuan duke përdorur dy metoda kryesore:
 
