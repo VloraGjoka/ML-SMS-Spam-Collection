@@ -1,15 +1,41 @@
+# SMS Spam Collection
 
-# Faza I: Përgatitja e modelit
+**Universiteti:** Universiteti i Prishtinës  
+**Fakulteti:** Fakulteti i Inxhinierisë Elektrike dhe Kompjuterike  
+**Programi Studimor:** Master në Inxhinieri Kompjuterike dhe Softuerike
 
-Ky projekt në lendën: *Machine learning* përmban përshkrimin e fazës së parë të projektimit dhe përgatitjes së modelit për klasifikimin e mesazheve në 'ham' (mesazhe të dëshiruara) dhe 'spam' (mesazhe të padëshiruara), duke përdorur datasetin "SMS Spam Collection".
+**Profesorët:**  
+- Prof. Dr. Inxh. Lule Ahmedi
+- PhD. c Mërgim Hoti
+
+**Studentët:**  
+- Vlora Gjoka
+- Sadik Zenuni
+
+## Përshkrimi i Projektit
+
+Projekti në lëndën "Machine Learning" synon të trajtojë sfidën e klasifikimit të mesazheve të SMS në dy kategori: 'ham' (mesazhe të dëshiruara) dhe 'spam' (mesazhe të padëshiruara), duke përdorur datasetin "SMS Spam Collection".
+
+### Fazat e Projektit
+
+Projekti është ndarë në tri faza kryesore:
+
+1. **Faza e parë: Përgatitja e Modelit**
+   - Në këtë fazë, bëhet përgatitja e të dhënave dhe ndërtimi i modelit fillestar të machine learning për klasifikimin e mesazheve.
+   
+2. **Faza e dytë: Analiza dhe Evaluimi**
+   - Pas trajnimit të modelit, zhvillohet një fazë e analizës së performancës dhe ritrajnimit të modelit bazuar në rezultatet e marra, për të arritur një saktësi më të lartë.
+   
+3. **Faza e tretë: Aplikimi i Veglave të Machine Learning**
+   - Në fazën përfundimtare, aplikohen teknikat e avancuara të machine learning për të optimizuar dhe implementuar modelin në një mjedis të gjallë.
+
+# Faza I: Përgatitja e Modelit
 
 ## Përshkrimi i detyrës
 
 Në këtë fazë, ne merremi me përgatitjen e modelit për të klasifikuar mesazhet në dy kategori: 'ham' dhe 'spam'. Kjo përfshin:
 - Leximin e të dhënave nga një burim,
 - Pastrimin dhe përpunimin e të dhënave,
-- Ndarjën e të dhënave në setin e trajnimit dhe testimit,
-- Trajnimin e një modeli të mësimit të makinës për të bërë parashikime bazuar në përmbajtjen e mesazhit.
 
 ## Detajet e datasetit
 
@@ -93,6 +119,8 @@ df.info()
 # Faza 2: Trajnimi i modelit
 
 ### Trajnimi dhe testimi i të dhënave
+- Ndarjën e të dhënave në setin e trajnimit dhe testimit,
+- Trajnimin e një modeli të mësimit të makinës për të bërë parashikime bazuar në përmbajtjen e mesazhit.
 
 ```
 # Ndajmë të dhënat në trajnues dhe testim
