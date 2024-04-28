@@ -117,10 +117,76 @@ Pas përfundimit të procesit të mostrimit, ne kemi krijuar vizualizime të rej
 
 ![Shpërndarja e Klasave Pas Mostrimit](faza1/results/after_moster.png)
 
+### Agregimi i të dhënave
 
-## Rezultatet e fazës së parë
+Në analizën tonë të datasetit "SMS Spam Collection", kemi përdorur agregime për të nxjerrë në pah disa statistika kyçe që ndihmojnë në kuptimin më të mirë të natyrës së të dhënave. Këto përfshijnë gjatësinë e mesazheve dhe shpërndarjen e klasave të mesazheve.
 
-Në fund të kësaj faze, pritet të kemi një skicë të qartë të procesit të trajnimit të modelit, duke përfshirë përgatitjen e të dhënave, zgjedhjen e modelit, dhe një vlerësim të parë të performancës së modelit në datasetin e testit.
+Statistikat e mëposhtme janë nxjerrë nga të dhënat:
+
+- **Gjatësia Mesatare e Mesazheve**: Gjatësia mesatare e të gjithë mesazheve në dataset.
+- **Gjatësia Maksimale dhe Minimale e Mesazheve**: Tregon gjatësinë maksimale dhe minimale të mesazheve që janë regjistruar.
+- **Numri i Mesazheve 'Spam' dhe 'Ham'**: Tregon se sa mesazhe janë klasifikuar si spam dhe sa si ham.
+- **Gjatësia Mesatare e Mesazheve sipas Kategorisë**: Mesatarja e gjatësisë së mesazheve për secilën kategori, që jep një ide mbi karakteristikat e mesazheve spam dhe ham.
+
+Këto të dhëna agreguese na ndihmojnë të përgatisim dhe rregullojmë më mirë modelet tona të mësimit të makinës për përmirësimin e saktësisë së klasifikimit të mesazheve.
+
+![Agregimi i te dhenave](faza1/results/agregation.png)
+
+###Menaxhimi i Outliers
+
+Në datasetin "SMS Spam Collection", ne kemi analizuar dhe trajtuar outliers për të përmirësuar cilësinë e të dhënave për mësimin e makinës. Outliers mund të ndikojnë ndjeshëm në modelin përfundimtar dhe mund të çojnë në përfundime të pasakta.
+
+#### Metodat e Identifikimit
+
+Outliers u identifikuan duke përdorur dy metoda kryesore:
+
+- **Boxplots**: U përdorën për një analizë vizuale, duke na lejuar të shohim shpejt dhe lehtësisht ndonjë vlerë ekstreme në gjatësinë e mesazheve.
+- **IQR Score**: Ne kemi përcaktuar vlerat ekstreme duke përdorur rangun ndërkartil të të dhënave, që është më pak i ndjeshëm ndaj outliers të ekstremeve.
+- Paraqitja e Outliers
+
+![Outliers](faza1/results/with_outliers.png)
+
+#### Trajtimi i Outliers
+![Outliers](faza1/results/outliers.png)
+
+- Pastrimi i Outliers
+
+![Without Outliers](faza1/results/withou_outliers.png)
+
+
+### Aplikimi i SMOTE
+```
+# Inicializimi i SMOTE
+sm = SMOTE(random_state=42)
+
+# Aplikimi i SMOTE në të dhënat e trajnimit
+X_train_res, y_train_res = sm.fit_resample(X_train, y_train)
+
+# Llogaritja e shpërndarjes së klasave para dhe pas SMOTE
+class_distribution_before = Counter(y_train)
+class_distribution_after = Counter(y_train_res)
+
+# Vizualizimi
+fig, ax = plt.subplots(1, 2, figsize=(14, 6))
+
+ax[0].bar(class_distribution_before.keys(), class_distribution_before.values(), color=['blue', 'green'])
+ax[0].set_title('Shpërndarja e Klasave Para SMOTE')
+ax[0].set_xlabel('Klasa')
+ax[0].set_ylabel('Numri i Shembujve')
+ax[0].set_xticks(list(class_distribution_before.keys()))
+ax[0].set_xticklabels(['Klasa 0', 'Klasa 1'])
+
+ax[1].bar(class_distribution_after.keys(), class_distribution_after.values(), color=['blue', 'green'])
+ax[1].set_title('Shpërndarja e Klasave Pas SMOTE')
+ax[1].set_xlabel('Klasa')
+ax[1].set_ylabel('Numri i Shembujve')
+ax[1].set_xticks(list(class_distribution_after.keys()))
+ax[1].set_xticklabels(['Klasa 0', 'Klasa 1'])
+
+plt.tight_layout()
+plt.show()
+```
+![SMOTE](faza1/results/smote.png)
 
 # Faza 2: Trajnimi i Modelit
 
