@@ -63,37 +63,6 @@ pip install pandas
 pip install scikit-learn
 ```
 
-## Algoritmet e klasifikimit
-
-Për datasetin "SMS Spam Collection", ne mund të përdorim disa algoritme të ndryshme të klasifikimit për të ndarë mesazhet në "spam" dhe "ham". Këto algoritme përfshijnë:
-
-### Naive Bayes
-- **Përshtatshëm për**: Kur kemi datasete relativisht të vogla dhe duam një model që është i shpejtë dhe efektiv në kohën e tij të trajnimit.
-- **Arsyeja e përdorimit**: Naive Bayes është një zgjedhje popullore për tekstual data si SMS për shkak të thjeshtësisë së tij dhe performancës së mirë me datasete me dimenzione të larta.
-
-### Support Vector Machine (SVM)
-- **Përshtatshëm për**: Kur kërkojmë një margin maksimal ndërmjet klasave dhe kemi një hapësirë të madhe karakteristikash.
-- **Arsyeja e përdorimit**: SVM mund të jetë efektiv në rastet kur ka një ndarje të qartë mes klasave dhe kur hapësira e karakteristikave është e madhe, që është e zakonshme në analizën e tekstit.
-
-### Random Forest
-- **Përshtatshëm për**: Kur duam të zvogëlojmë rrezikun e overfitting dhe të trajtojmë mirë të dhënat jo-lineare.
-- **Arsyeja e përdorimit**: Random Forest është një metodë e qëndrueshme që përdor një sërë pemësh vendimmarrëse për të rritur saktësinë e parashikimeve dhe për të menaxhuar mirë varësitë në të dhëna.
-
-### Logistic Regression
-- **Përshtatshëm për**: Rastet kur dëshirojmë një model probabilitetik që tregon gjasat e përkatësisë në një klasë.
-- **Arsyeja e përdorimit**: Përdoret shpesh për probleme të klasifikimit binar siç është rasti me SMS spam dhe ham, ofron një mënyrë intuitive për të kuptuar rëndësinë e karakteristikave të ndryshme.
-
-### Testimi i modelit
-
-Për të vlerësuar performancën e modeleve të klasifikimit, ne mund të përdorim teknika të ndryshme të testimit, duke përfshirë:
-
-- **Ndarja e të dhënave në setin e trajnimit dhe testimit**: Një pjesë e të dhënave (zakonisht rreth 70-80%) përdoret për të trajnuar modelin, ndërsa pjesa tjetër përdoret për të testuar performancën e tij.
-- **Kryqëzimi i validimit (Cross-Validation)**: Përdoret për të vlerësuar aftësinë e generalizimit të një modeli të mësimit të makinës mbi një set të dhënash të padukshme.
-- **Metrikat e performancës**: Përfshijnë saktësinë (accuracy), matricën e konfuzionit, precision, recall, dhe F1 score për të matur se sa mirë modeli mund të klasifikojë mesazhet.
-
-Përdorimi i një kombinimi të këtyre metodave siguron një vlerësim të gjithanshëm të aftësisë së modelit për të parashikuar saktësisht kategoritë e mesazheve.
-
-
 ## Rezultatet e fazës së parë
 
 Në fund të kësaj faze, pritet të kemi një skicë të qartë të procesit të trajnimit të modelit, duke përfshirë përgatitjen e të dhënave, zgjedhjen e modelit, dhe një vlerësim të parë të performancës së modelit në datasetin e testit.
@@ -114,15 +83,21 @@ df.info()
 ```
 ![DaInfo_Dataset](faza1/results/info_dataset.png)
 
+# Faza 2: Trajnimi i Modelit
 
+## Trajnimi dhe Testimi i të Dhënave
 
-# Faza 2: Trajnimi i modelit
+Në këtë fazë, ne ndajmë të dhënat në setin e trajnimit dhe testimit dhe trajnojmë një model të mësimit të makinës për të bërë parashikime bazuar në përmbajtjen e mesazhit.
 
-### Trajnimi dhe testimi i të dhënave
-- Ndarjën e të dhënave në setin e trajnimit dhe testimit,
-- Trajnimin e një modeli të mësimit të makinës për të bërë parashikime bazuar në përmbajtjen e mesazhit.
+## Testimi i Modelit
 
-```
+Për të vlerësuar performancën e modeleve të klasifikimit, përdorim teknika të ndryshme të testimit si:
+
+- **Ndarja e të dhënave në setin e trajnimit dhe testimit**: Rreth 70-80% të të dhënave përdoren për trajnim, ndërsa pjesa tjetër për testim.
+- **Kryqëzimi i Validimit (Cross-Validation)**: Vlerëson aftësinë e generalizimit të modelit në sete të dhënash të padukshme.
+- **Metrikat e Performancës**: Përfshinë saktësinë, matricën e konfuzionit, precision, recall, dhe F1 score.
+
+```python
 # Ndajmë të dhënat në trajnues dhe testim
 X_train, X_test, y_train, y_test = train_test_split(df['Message'], df['Label'], test_size=0.2, random_state=42)
 
@@ -142,6 +117,27 @@ print("Confusion Matrix:\n", confusion_matrix(y_test, predictions))
 print("Classification Report:\n", classification_report(y_test, predictions))
 ```
 ![Train_Test_Data](faza1/results/train_test.png)
+
+## Algoritmet e Klasifikimit
+
+Për datasetin "SMS Spam Collection", eksplorojmë disa algoritme të klasifikimit:
+
+### Naive Bayes
+- **Përshtatshëm për**: Datasete të vogla me trajnim të shpejtë.
+- **Arsyeja e Përdorimit**: Efikas për tekstin, ofron performancë të lartë në datasete me dimension të lartë.
+
+### Support Vector Machine (SVM)
+- **Përshtatshëm për**: Ndarje të qartë mes klasave, hapësirë të madhe të karakteristikave.
+- **Arsyeja e Përdorimit**: Efektiv në raste me ndarje të qartë mes klasave.
+
+### Random Forest
+- **Përshtatshëm për**: Zvogëlimin e overfitting dhe menaxhimin e të dhënave jo-lineare.
+- **Arsyeja e Përdorimit**: Metodë e qëndrueshme, përdor një ansambël pemësh vendimmarrëse.
+
+### Logistic Regression
+- **Përshtatshëm për**: Modele probabilitetike që tregojnë gjasat e përkatësisë në një klasë.
+- **Arsyeja e Përdorimit**: Intuitive dhe shpesh përdoret për klasifikimin binar.
+
 
 # Kontributi
 Vlora Gjoka
