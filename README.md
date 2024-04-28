@@ -192,7 +192,7 @@ plt.show()
 
 ## Trajnimi dhe Testimi i të Dhënave
 
-Në këtë fazë, ne ndajmë të dhënat në setin e trajnimit dhe testimit dhe trajnojmë një model të mësimit të makinës për të bërë parashikime bazuar në përmbajtjen e mesazhit.
+Në këtë fazë, ne ndajmë të dhënat në setin e trajnimit dhe testimit dhe trajnojmë modele të mësimit të makinës për të bërë parashikime bazuar në përmbajtjen e mesazhit.
 
 ## Testimi i Modelit
 
@@ -243,6 +243,72 @@ Për datasetin "SMS Spam Collection", eksplorojmë disa algoritme të klasifikim
 - **Përshtatshëm për**: Modele probabilitetike që tregojnë gjasat e përkatësisë në një klasë.
 - **Arsyeja e Përdorimit**: Intuitive dhe shpesh përdoret për klasifikimin binar.
 
+## Analiza e SMS Spam Collection
+
+Projekti përfshin trajnimin dhe testimin e disa modeleve të mësimit të makinës për të parashikuar nëse një mesazh SMS është 'spam' apo 'ham' (jo spam).
+
+### Përgatitja e të dhënave
+
+Të dhënat u përpunuan duke përdorur `TfidfVectorizer` për të kthyer tekstet në formate numerike që mund të përpunohen nga modele të mësimit të makinës.
+
+### Modelet e testuara
+
+U testuan modelet e mëposhtme:
+- Naive Bayes
+- Logistic Regression
+- Decision Tree Classifier
+- Random Forest Classifier
+- Support Vector Machine
+- K Neighbors
+
+### Ndarja e të dhënave
+
+Të dhënat u ndanë në sete trajnimi dhe testimi me ndarje të ndryshme si 40/60, 30/70, 20/80, dhe 10/90 për të vlerësuar ndikimin e madhësisë së setit të trajnimit në performancën e modelit.
+
+
+### Rezultatet e Vlerësimit të Modeleve të Klasifikimit të Mesazheve SMS
+
+Tabelat e mëposhtme përmbajnë rezultatet e vlerësimit të modeleve të ndryshëm të klasifikimit duke përdorur ndarje të ndryshme të të dhënave për trajnim dhe testim. Vlerësimi është bërë duke përdorur matricat: saktësinë (Accuracy), F1-score, Recall dhe Precision.
+
+#### Rezultatet me ndarjen e të dhënave 60/40
+
+| Model                | Accuracy | F1-score | Recall | Precision |
+|----------------------|----------|----------|--------|-----------|
+| Logistic Regression  | 0.95     | 0.72     | 0.57   | 0.99      |
+| Decision Tree        | 0.96     | 0.84     | 0.82   | 0.85      |
+| Random Forest        | 0.97     | 0.88     | 0.78   | 0.99      |
+| Support Vector Machine| 0.98    | 0.89     | 0.82   | 0.98      |
+| K Neighbors          | 0.90     | 0.26     | 0.15   | 1.00      |
+
+#### Rezultatet me ndarjen e të dhënave 70/30
+
+| Model                | Accuracy | F1-score | Recall | Precision |
+|----------------------|----------|----------|--------|-----------|
+| Logistic Regression  | 0.95     | 0.73     | 0.58   | 0.97      |
+| Decision Tree        | 0.95     | 0.80     | 0.81   | 0.78      |
+| Random Forest        | 0.98     | 0.88     | 0.79   | 0.99      |
+| Support Vector Machine| 0.98    | 0.89     | 0.83   | 0.95      |
+| K Neighbors          | 0.91     | 0.31     | 0.19   | 1.00      |
+
+#### Rezultatet me ndarjen e të dhënave 80/20
+
+| Model                | Accuracy | F1-score | Recall | Precision |
+|----------------------|----------|----------|--------|-----------|
+| Logistic Regression  | 0.96     | 0.78     | 0.65   | 0.97      |
+| Decision Tree        | 0.96     | 0.80     | 0.80   | 0.80      |
+| Random Forest        | 0.97     | 0.86     | 0.77   | 0.99      |
+| Support Vector Machine| 0.98    | 0.89     | 0.83   | 0.96      |
+| K Neighbors          | 0.91     | 0.34     | 0.21   | 1.00      |
+
+#### Rezultatet me ndarjen e të dhënave 90/10
+
+| Model                | Accuracy | F1-score | Recall | Precision |
+|----------------------|----------|----------|--------|-----------|
+| Logistic Regression  | 0.96     | 0.79     | 0.66   | 0.97      |
+| Decision Tree        | 0.97     | 0.84     | 0.81   | 0.88      |
+| Random Forest        | 0.98     | 0.88     | 0.79   | 1.00      |
+| Support Vector Machine| 0.98    | 0.91     | 0.85   | 0.98      |
+| K Neighbors          | 0.92     | 0.34     | 0.21   | 1.00      |
 
 # Kontributi
 Vlora Gjoka
