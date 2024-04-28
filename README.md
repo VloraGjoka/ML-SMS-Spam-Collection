@@ -53,6 +53,18 @@ Për të ekzekutuar skriptat e këtij projekti të Mësimit të Makinës për da
 
 - pandas
 - scikit-learn
+- numpy
+- matplotlib.pyplot
+- seaborn
+- sklearn.model_selection
+- sklearn.feature_extraction.text
+- sklearn.naive_bayes
+- sklearn.metrics
+- sklearn.linear_model
+- sklearn.svm
+- sklearn.tree
+- sklearn.utils
+- sklearn.model_selection
 
 ## Udhëzime për instalim
 
