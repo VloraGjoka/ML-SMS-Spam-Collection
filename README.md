@@ -324,3 +324,4 @@ Tabelat e mëposhtme përmbajnë rezultatet e vlerësimit të modeleve të ndrys
 | Support Vector Machine| 0.98    | 0.91     | 0.85   | 0.98      |
 | K Neighbors          | 0.92     | 0.34     | 0.21   | 1.00      |
 
+# Faza 3: Analiza dhe evaluimi (Ritrajnimi)
