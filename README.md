@@ -332,8 +332,20 @@ Në fazën e tretë të projektit, fokusohemi në optimizimin dhe zbatimin prakt
 ### 1. Zgjerimi i Feature Engineering
 - Implementimi i teknikave të avancuara si TF-IDF dhe analiza e sentimentit për të përmirësuar dallimin midis mesazheve 'spam' dhe 'ham'.
 
+## Karakteristikat
+
+- **Pastrimi i të dhënave**: Pastrim të gjithanshëm dhe përpunim paraprak të tekstit për të përmirësuar saktësinë e modelit është bërë në fazën e parë.
+- **Inxhinieri e Karakteristikave**: Përdorimi i TfidfVectorizer për të transformuar mesazhet e tekstit në forma numerike që mund të përpunohen nga modelet e mësimit të makinës.
+- **Trajnimi dhe Optimizimi i Modelit**: Përdorimi i  RandomForestClassifier së bashku me GridSearchCV për të gjetur kombinimin më të mirë të parametrave për modelin.
+
+-  **Ngarkimi dhe pastrimi i të dhënave**: Të dhënat ngarkohen dhe pastrohen për çdo gabim ose vlerë të munguar.
+- **Përgatitja e karakteristikave**: Teksti konvertohet në vektorë numerikë duke përdorur teknikat e Tfidf.
+- **Ndajtja e të dhënave**: Të dhënat ndahen në sete trajnimi dhe testimi për të vlerësuar modelin.
+-  **Optimizimi i modelit**: Parametrat e modelit optimizohen për të arritur performancën më të lartë.
+-  **Vlerësimi i modelit**: Modeli vlerësohet në bazë të saktësisë, raportit të klasifikimit dhe matricës së konfuzionit.
+
 ### 2. Trajnimi dhe Optimizimi i Modeleve të Avancuara
-- Testimi i modelesh të ndryshme të mësimit të thellë si CNN dhe RNN.
+- Testimi i modeleve të ndryshme të mësimit të thellë si CNN dhe RNN.
 - Përdorimi i Grid Search dhe Randomized Search për të gjetur konfigurimet optimale të parametrave.
 
 ### 3. Vlerësimi dhe Validimi i Modelit
@@ -342,10 +354,6 @@ Në fazën e tretë të projektit, fokusohemi në optimizimin dhe zbatimin prakt
 
 ### 4. Implementimi dhe Testimi Praktik
 - Zbatimi i modelit në aplikacione reale dhe monitorimi i performancës së tij në kushte të ndryshme.
-
-### 5. Diskutimi dhe Konkluzione
-- Analiza e ndikimit të ndryshimeve të bëra dhe vlerësimi i performancës përfundimtare të modelit.
-- Rekomandime për përdorimin e modelit dhe hapat e mëtejshëm për përmirësime të ardhshme.
 
 ## Përfundimi
 
