@@ -335,3 +335,18 @@ Në fazën e tretë të projektit, fokusohemi në optimizimin dhe zbatimin prakt
 ### 2. Trajnimi dhe Optimizimi i Modeleve të Avancuara
 - Testimi i modelesh të ndryshme të mësimit të thellë si CNN dhe RNN.
 - Përdorimi i Grid Search dhe Randomized Search për të gjetur konfigurimet optimale të parametrave.
+
+### 3. Vlerësimi dhe Validimi i Modelit
+- Implementimi i k-fold cross-validation për të siguruar që modeli ka performancë të qëndrueshme.
+- Analiza e metrikave të performancës si saktësia, precision, recall dhe F1-score.
+
+### 4. Implementimi dhe Testimi Praktik
+- Zbatimi i modelit në aplikacione reale dhe monitorimi i performancës së tij në kushte të ndryshme.
+
+### 5. Diskutimi dhe Konkluzione
+- Analiza e ndikimit të ndryshimeve të bëra dhe vlerësimi i performancës përfundimtare të modelit.
+- Rekomandime për përdorimin e modelit dhe hapat e mëtejshëm për përmirësime të ardhshme.
+
+## Përfundimi
+
+Faza e tretë përfundon me një model të optimizuar dhe të gatshëm për t'u zbatuar në skenarë të ndryshëm realë, duke siguruar një zgjidhje efektive për dallimin e mesazheve spam nga ato të dëshiruara. Kjo fazë kontribuon në rritjen e efikasitetit dhe saktësisë së sistemeve automatike të filtrimit të mesazheve.
