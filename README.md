@@ -325,3 +325,13 @@ Tabelat e mëposhtme përmbajnë rezultatet e vlerësimit të modeleve të ndrys
 | K Neighbors          | 0.92     | 0.34     | 0.21   | 1.00      |
 
 # Faza 3: Analiza dhe evaluimi (Ritrajnimi)
+
+Në fazën e tretë të projektit, fokusohemi në optimizimin dhe zbatimin praktik të modelit të mësimit të makinës që është zhvilluar dhe testuar në fazat e mëparshme. Ky proces përfshin përmirësimin e modelit përmes zgjerimit të feature engineering, optimizimit të hiperparametrave, dhe testimit të modelit në mjedise të ndryshme.
+
+## Procesi
+### 1. Zgjerimi i Feature Engineering
+- Implementimi i teknikave të avancuara si TF-IDF dhe analiza e sentimentit për të përmirësuar dallimin midis mesazheve 'spam' dhe 'ham'.
+
+### 2. Trajnimi dhe Optimizimi i Modeleve të Avancuara
+- Testimi i modelesh të ndryshme të mësimit të thellë si CNN dhe RNN.
+- Përdorimi i Grid Search dhe Randomized Search për të gjetur konfigurimet optimale të parametrave.
