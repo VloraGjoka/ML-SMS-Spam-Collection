@@ -331,12 +331,12 @@ Në fazën e tretë të projektit, fokusohemi në optimizimin dhe zbatimin prakt
 ### 1. Zgjerimi i Feature Engineering
 - Implementimi i teknikave të avancuara si TF-IDF dhe analiza e sentimentit për të përmirësuar dallimin midis mesazheve 'spam' dhe 'ham'.
 
-## Karakteristikat
+#### Karakteristikat
 
-- Zgjedhja e Karakteristikave dhe Përpunimi i Të Dhënave: Përdorimi i parametrave të optimizuar të TfidfVectorizer dhe pastrimi i të dhënave.
-- Zgjedhja dhe Konfigurimi i Modeleve: Përdorimi i GridSearchCV për të gjetur kombinimet optimale të parametrave për çdo model.
-- Teknikat e Balancimit të Të Dhënave: Përdorimi i SMOTE për balancimin e klasave.
-- Validimi Kryqëzues dhe Rregullimi i Modelit: Përdorimi i validimit kryqëzues dhe kombinimi i parashikimeve nga modele të ndryshme.
+- Zgjedhja e karakteristikave dhe përpunimi i Të dhënave: Përdorimi i parametrave të optimizuar të TfidfVectorizer dhe pastrimi i të dhënave.
+- Zgjedhja dhe konfigurimi i modeleve: Përdorimi i GridSearchCV për të gjetur kombinimet optimale të parametrave për çdo model.
+- Teknikat e balancimit të të dhënave: Përdorimi i SMOTE për balancimin e klasave.
+- Validimi kryqëzues dhe rregullimi i modelit: Përdorimi i validimit kryqëzues dhe kombinimi i parashikimeve nga modele të ndryshme.
 
 -  **Ngarkimi dhe pastrimi i të dhënave**: Të dhënat ngarkohen dhe pastrohen për çdo gabim ose vlerë të munguar.
 - **Përgatitja e karakteristikave**: Teksti konvertohet në vektorë numerikë duke përdorur teknikat e Tfidf.
@@ -344,20 +344,20 @@ Në fazën e tretë të projektit, fokusohemi në optimizimin dhe zbatimin prakt
 -  **Optimizimi i modelit**: Parametrat e modelit optimizohen për të arritur performancën më të lartë.
 -  **Vlerësimi i modelit**: Modeli vlerësohet në bazë të saktësisë, raportit të klasifikimit dhe matricës së konfuzionit.
 
-### 2. Trajnimi dhe Optimizimi i Modeleve të Avancuara
+### 2. Trajnimi dhe optimizimi i modeleve të avancuara
 - Testimi i modeleve të ndryshme të mësimit të thellë si CNN dhe RNN.
 - Përdorimi i Grid Search dhe Randomized Search për të gjetur konfigurimet optimale të parametrave.
 
-### 3. Vlerësimi dhe Validimi i Modelit
+### 3. Vlerësimi dhe validimi i modelit
 - Implementimi i k-fold cross-validation për të siguruar që modeli ka performancë të qëndrueshme.
 - Analiza e metrikave të performancës si saktësia, precision, recall dhe F1-score.
 
-### 4. Implementimi dhe Testimi Praktik
+### 4. Implementimi dhe testimi praktik
 - Zbatimi i modelit në aplikacione reale dhe monitorimi i performancës së tij në kushte të ndryshme.
 
 - Modelet treguan një performancë të lartë, veçanërisht pas përdorimit të teknikave të optimizimit të hiperparametrave. Rekomandohet të vazhdohet me këto modele për aplikime në kushte reale dhe të eksplorohen më tej përmirësimet e mundshme në inxhinierinë e karakteristikave dhe optimizimin e mëtejshëm të modeleve.
 
-## Rezultatet e Optimizuara të Modeleve
+## Rezultatet e optimizuara të modeleve
 
 Përmbledhje e rezultateve të performancës së modeleve për ndarjen e të dhënave në fazën e dytë dhe të tretë:
 
