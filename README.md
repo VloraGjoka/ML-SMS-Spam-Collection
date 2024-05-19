@@ -368,23 +368,23 @@ Përmbledhje e rezultateve të performancës së modeleve për ndarjen e të dh�
 | Logistic Regression     | Accuracy   | 0.95        | 0.97                     | +0.02   |
 |                         | F1-score   | 0.72        | 0.87                     | +0.15   |
 |                         | Recall     | 0.57        | 0.86                     | +0.29   |
-|                         | Precision  | 0.99        | 0.89                     | -0.10   |
-| Decision Tree           | Accuracy   | 0.96        | 0.95                     | -0.01   |
-|                         | F1-score   | 0.84        | 0.81                     | -0.03   |
-|                         | Recall     | 0.83        | 0.82                     | -0.01   |
-|                         | Precision  | 0.85        | 0.79                     | -0.06   |
+|                         | Precision  | 0.99        | 0.89                     | +0.10   |
+| Decision Tree           | Accuracy   | 0.96        | 0.96                     | +0.00   |
+|                         | F1-score   | 0.83        | 0.83                     | +0.00   |
+|                         | Recall     | 0.83        | 0.86                     | +0.03   |
+|                         | Precision  | 0.84        | 0.79                     | +0.05   |
 | Random Forest           | Accuracy   | 0.97        | 0.98                     | +0.01   |
-|                         | F1-score   | 0.88        | 0.91                     | +0.03   |
-|                         | Recall     | 0.79        | 0.84                     | +0.05   |
-|                         | Precision  | 1.00        | 0.99                     | -0.01   |
-| Support Vector Machine  | Accuracy   | 0.98        | 0.97                     | -0.01   |
-|                         | F1-score   | 0.89        | 0.89                     |  0.00   |
+|                         | F1-score   | 0.86        | 0.91                     | +0.05   |
+|                         | Recall     | 0.76        | 0.84                     | +0.08   |
+|                         | Precision  | 0.99        | 0.99                     | +0.00   |
+| Support Vector Machine  | Accuracy   | 0.98        | 0.97                     | +0.01   |
+|                         | F1-score   | 0.89        | 0.89                     | +0.00   |
 |                         | Recall     | 0.82        | 0.85                     | +0.03   |
-|                         | Precision  | 0.98        | 0.93                     | -0.05   |
+|                         | Precision  | 0.98        | 0.93                     | +0.05   |
 | K Neighbors             | Accuracy   | 0.90        | 0.94                     | +0.04   |
 |                         | F1-score   | 0.26        | 0.72                     | +0.46   |
 |                         | Recall     | 0.15        | 0.59                     | +0.44   |
-|                         | Precision  | 1.00        | 0.93                     | -0.07   |
+|                         | Precision  | 1.00        | 0.93                     | +0.07   |
 
 ### Ndarja 70/30
 
@@ -393,23 +393,23 @@ Përmbledhje e rezultateve të performancës së modeleve për ndarjen e të dh�
 | Logistic Regression     | Accuracy   | 0.95        | 0.97                     | +0.02   |
 |                         | F1-score   | 0.73        | 0.89                     | +0.16   |
 |                         | Recall     | 0.58        | 0.89                     | +0.31   |
-|                         | Precision  | 0.97        | 0.89                     | -0.08   |
-| Decision Tree           | Accuracy   | 0.95        | 0.94                     | -0.01   |
-|                         | F1-score   | 0.78        | 0.76                     | -0.02   |
-|                         | Recall     | 0.79        | 0.76                     | -0.03   |
-|                         | Precision  | 0.77        | 0.75                     | -0.02   |
+|                         | Precision  | 0.97        | 0.89                     | +0.08   |
+| Decision Tree           | Accuracy   | 0.95        | 0.94                     | +0.01   |
+|                         | F1-score   | 0.78        | 0.76                     | +0.02   |
+|                         | Recall     | 0.79        | 0.76                     | +0.03   |
+|                         | Precision  | 0.77        | 0.75                     | +0.02   |
 | Random Forest           | Accuracy   | 0.97        | 0.98                     | +0.01   |
 |                         | F1-score   | 0.86        | 0.89                     | +0.03   |
 |                         | Recall     | 0.76        | 0.83                     | +0.07   |
-|                         | Precision  | 0.99        | 0.97                     | -0.02   |
-| Support Vector Machine  | Accuracy   | 0.98        | 0.98                     |  0.00   |
+|                         | Precision  | 0.99        | 0.97                     | +0.02   |
+| Support Vector Machine  | Accuracy   | 0.98        | 0.98                     | +0.00   |
 |                         | F1-score   | 0.89        | 0.91                     | +0.02   |
 |                         | Recall     | 0.83        | 0.89                     | +0.06   |
-|                         | Precision  | 0.95        | 0.92                     | -0.03   |
+|                         | Precision  | 0.95        | 0.92                     | +0.03   |
 | K Neighbors             | Accuracy   | 0.91        | 0.95                     | +0.04   |
 |                         | F1-score   | 0.31        | 0.73                     | +0.42   |
 |                         | Recall     | 0.19        | 0.61                     | +0.42   |
-|                         | Precision  | 1.00        | 0.91                     | -0.09   |
+|                         | Precision  | 1.00        | 0.91                     | +0.09   |
 
 
 ## Përmirësimet
