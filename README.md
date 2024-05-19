@@ -10,7 +10,6 @@
 
 **Studentët:**  
 - Vlora Gjoka
-- Sadik Zenuni
 
 ## Përshkrimi i Projektit
 
