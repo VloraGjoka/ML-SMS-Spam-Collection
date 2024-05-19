@@ -333,7 +333,7 @@ Në fazën e tretë të projektit, fokusohemi në optimizimin dhe zbatimin prakt
 
 #### Karakteristikat
 
-- Zgjedhja e karakteristikave dhe përpunimi i Të dhënave: Përdorimi i parametrave të optimizuar të TfidfVectorizer dhe pastrimi i të dhënave.
+- Zgjedhja e karakteristikave dhe përpunimi i të dhënave: Përdorimi i parametrave të optimizuar të TfidfVectorizer dhe pastrimi i të dhënave.
 - Zgjedhja dhe konfigurimi i modeleve: Përdorimi i GridSearchCV për të gjetur kombinimet optimale të parametrave për çdo model.
 - Teknikat e balancimit të të dhënave: Përdorimi i SMOTE për balancimin e klasave.
 - Validimi kryqëzues dhe rregullimi i modelit: Përdorimi i validimit kryqëzues dhe kombinimi i parashikimeve nga modele të ndryshme.
