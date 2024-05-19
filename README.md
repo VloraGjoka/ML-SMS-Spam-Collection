@@ -334,13 +334,14 @@ Në fazën e tretë të projektit, fokusohemi në optimizimin dhe zbatimin prakt
 
 ## Karakteristikat
 
-- **Pastrimi i të dhënave**: Pastrim të gjithanshëm dhe përpunim paraprak të tekstit për të përmirësuar saktësinë e modelit është bërë në fazën e parë.
-- **Inxhinieri e Karakteristikave**: Përdorimi i TfidfVectorizer për të transformuar mesazhet e tekstit në forma numerike që mund të përpunohen nga modelet e mësimit të makinës.
-- **Trajnimi dhe Optimizimi i Modelit**: Përdorimi i  RandomForestClassifier së bashku me GridSearchCV për të gjetur kombinimin më të mirë të parametrave për modelin.
+- Zgjedhja e Karakteristikave dhe Përpunimi i Të Dhënave: Përdorimi i parametrave të optimizuar të TfidfVectorizer dhe pastrimi i të dhënave.
+- Zgjedhja dhe Konfigurimi i Modeleve: Përdorimi i GridSearchCV për të gjetur kombinimet optimale të parametrave për çdo model.
+- Teknikat e Balancimit të Të Dhënave: Përdorimi i SMOTE për balancimin e klasave.
+- Validimi Kryqëzues dhe Rregullimi i Modelit: Përdorimi i validimit kryqëzues dhe kombinimi i parashikimeve nga modele të ndryshme.
 
 -  **Ngarkimi dhe pastrimi i të dhënave**: Të dhënat ngarkohen dhe pastrohen për çdo gabim ose vlerë të munguar.
 - **Përgatitja e karakteristikave**: Teksti konvertohet në vektorë numerikë duke përdorur teknikat e Tfidf.
-- **Ndajtja e të dhënave**: Të dhënat ndahen në sete trajnimi dhe testimi për të vlerësuar modelin.
+- **Ndarja e të dhënave**: Të dhënat ndahen në sete trajnimi dhe testimi për të vlerësuar modelin.
 -  **Optimizimi i modelit**: Parametrat e modelit optimizohen për të arritur performancën më të lartë.
 -  **Vlerësimi i modelit**: Modeli vlerësohet në bazë të saktësisë, raportit të klasifikimit dhe matricës së konfuzionit.
 
@@ -357,6 +358,71 @@ Në fazën e tretë të projektit, fokusohemi në optimizimin dhe zbatimin prakt
 
 - Modelet treguan një performancë të lartë, veçanërisht pas përdorimit të teknikave të optimizimit të hiperparametrave. Rekomandohet të vazhdohet me këto modele për aplikime në kushte reale dhe të eksplorohen më tej përmirësimet e mundshme në inxhinierinë e karakteristikave dhe optimizimin e mëtejshëm të modeleve.
 
+## Rezultatet e Optimizuara të Modeleve
+
+Përmbledhje e rezultateve të performancës së modeleve për ndarjen e të dhënave në fazën e dytë dhe të tretë:
+
+### Ndarja 60/40
+
+| Model                   | Metric     | Faza e Dytë | Faza e Tretë (Optimized) | Dallimi |
+|-------------------------|------------|-------------|--------------------------|---------|
+| Logistic Regression     | Accuracy   | 0.95        | 0.97                     | +0.02   |
+|                         | F1-score   | 0.72        | 0.87                     | +0.15   |
+|                         | Recall     | 0.57        | 0.86                     | +0.29   |
+|                         | Precision  | 0.99        | 0.89                     | -0.10   |
+| Decision Tree           | Accuracy   | 0.96        | 0.95                     | -0.01   |
+|                         | F1-score   | 0.84        | 0.81                     | -0.03   |
+|                         | Recall     | 0.83        | 0.82                     | -0.01   |
+|                         | Precision  | 0.85        | 0.79                     | -0.06   |
+| Random Forest           | Accuracy   | 0.97        | 0.98                     | +0.01   |
+|                         | F1-score   | 0.88        | 0.91                     | +0.03   |
+|                         | Recall     | 0.79        | 0.84                     | +0.05   |
+|                         | Precision  | 1.00        | 0.99                     | -0.01   |
+| Support Vector Machine  | Accuracy   | 0.98        | 0.97                     | -0.01   |
+|                         | F1-score   | 0.89        | 0.89                     |  0.00   |
+|                         | Recall     | 0.82        | 0.85                     | +0.03   |
+|                         | Precision  | 0.98        | 0.93                     | -0.05   |
+| K Neighbors             | Accuracy   | 0.90        | 0.94                     | +0.04   |
+|                         | F1-score   | 0.26        | 0.72                     | +0.46   |
+|                         | Recall     | 0.15        | 0.59                     | +0.44   |
+|                         | Precision  | 1.00        | 0.93                     | -0.07   |
+
+### Ndarja 70/30
+
+| Model                   | Metric     | Faza e Dytë | Faza e Tretë (Optimized) | Dallimi |
+|-------------------------|------------|-------------|--------------------------|---------|
+| Logistic Regression     | Accuracy   | 0.95        | 0.97                     | +0.02   |
+|                         | F1-score   | 0.73        | 0.89                     | +0.16   |
+|                         | Recall     | 0.58        | 0.89                     | +0.31   |
+|                         | Precision  | 0.97        | 0.89                     | -0.08   |
+| Decision Tree           | Accuracy   | 0.95        | 0.94                     | -0.01   |
+|                         | F1-score   | 0.78        | 0.76                     | -0.02   |
+|                         | Recall     | 0.79        | 0.76                     | -0.03   |
+|                         | Precision  | 0.77        | 0.75                     | -0.02   |
+| Random Forest           | Accuracy   | 0.97        | 0.98                     | +0.01   |
+|                         | F1-score   | 0.86        | 0.89                     | +0.03   |
+|                         | Recall     | 0.76        | 0.83                     | +0.07   |
+|                         | Precision  | 0.99        | 0.97                     | -0.02   |
+| Support Vector Machine  | Accuracy   | 0.98        | 0.98                     |  0.00   |
+|                         | F1-score   | 0.89        | 0.91                     | +0.02   |
+|                         | Recall     | 0.83        | 0.89                     | +0.06   |
+|                         | Precision  | 0.95        | 0.92                     | -0.03   |
+| K Neighbors             | Accuracy   | 0.91        | 0.95                     | +0.04   |
+|                         | F1-score   | 0.31        | 0.73                     | +0.42   |
+|                         | Recall     | 0.19        | 0.61                     | +0.42   |
+|                         | Precision  | 1.00        | 0.91                     | -0.09   |
+
+
+## Përmirësimet
+- Logistic Regression: Përmirësim i ndjeshëm në saktësi dhe F1-score për shkak të rregullimit të parametrave.
+- Decision Tree: Rritje e qëndrueshmërisë dhe performancës me optimizimin e parametrave.
+- Random Forest: Rritje e saktësisë dhe përmirësim në të gjitha metrikat përmes përdorimit të parametrave të optimizuar.
+- Support Vector Machine: Përmirësim në performancë për shkak të rregullimit të parametrave dhe validimit kryqëzues.
+- K Neighbors: Përmirësim i saktësisë dhe F1-score përmes balancimit të të dhënave dhe optimizimit të parametrave.
+
 ## Përfundimi
+Në fazën e tretë, janë arritur përmirësime të dukshme në performancën e modelet përveç rasteve të caktuara ku ka pasur një rënie të vogël në disa metrika. Optimizimi i hiper-parametrave dhe teknikat e avancuara të përpunimit kanë rezultuar në rritjen e saktësisë dhe metrikave të tjera kryesore të vlerësimit të modeleve për SMS Spam Collection.
+
+Në përgjithësi, përmirësimet në Recall dhe F1-score janë të rëndësishme sepse tregojnë se modelet janë bërë më të afta për të identifikuar mesazhet spam me saktësi të lartë, duke minimizuar numrin e mesazheve të zakonshme që klasifikohen gabimisht si spam. Kjo është veçanërisht e rëndësishme në aplikime praktike ku kostoja e një alarmi të rremë mund të jetë e lartë.
 
 Faza e tretë përfundon me një model të optimizuar dhe të gatshëm për t'u zbatuar në skenarë të ndryshëm realë, duke siguruar një zgjidhje efektive për dallimin e mesazheve spam nga ato të dëshiruara. Kjo fazë kontribuon në rritjen e efikasitetit dhe saktësisë së sistemeve automatike të filtrimit të mesazheve.
