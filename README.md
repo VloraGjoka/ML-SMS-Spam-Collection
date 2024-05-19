@@ -355,6 +355,8 @@ Në fazën e tretë të projektit, fokusohemi në optimizimin dhe zbatimin prakt
 ### 4. Implementimi dhe Testimi Praktik
 - Zbatimi i modelit në aplikacione reale dhe monitorimi i performancës së tij në kushte të ndryshme.
 
+- Modelet treguan një performancë të lartë, veçanërisht pas përdorimit të teknikave të optimizimit të hiperparametrave. Rekomandohet të vazhdohet me këto modele për aplikime në kushte reale dhe të eksplorohen më tej përmirësimet e mundshme në inxhinierinë e karakteristikave dhe optimizimin e mëtejshëm të modeleve.
+
 ## Përfundimi
 
 Faza e tretë përfundon me një model të optimizuar dhe të gatshëm për t'u zbatuar në skenarë të ndryshëm realë, duke siguruar një zgjidhje efektive për dallimin e mesazheve spam nga ato të dëshiruara. Kjo fazë kontribuon në rritjen e efikasitetit dhe saktësisë së sistemeve automatike të filtrimit të mesazheve.
